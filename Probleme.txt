@@ -1,0 +1,359 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+
+  int x, t, y;
+  cin >> x >> t >> y;
+
+  int T;
+
+  while(x > y){
+    x = x - x / 4;
+    T+=t;
+  }
+
+  cout << T;
+
+}
+
+
+
+-----
+
+
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+
+     int n,x;
+     cin >> n;
+
+     for(int i = 0; i < n ; i++){
+        cin>>x;
+        int sroot = sqrt(x);
+        if(sroot * sroot == x){
+            cout<<"DA\n";
+        }
+        else cout<<"NU\n";
+     }
+
+}
+
+
+------
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+
+     int n,x;
+     cin >> n;
+
+     for(int i = 0; i < n ; i++){
+        cin>>x;
+        bool pp = false;
+         for(int j = 0; j *j <=x ;j++){
+                if(j*j == x)
+                    pp = true;
+         }
+         if(pp == true)
+            cout<<"DA\n";
+         else cout<<"NU\n";
+        /// j <=sqrt(x)
+        /// j*j <= x
+        }
+
+}
+
+------
+
+     int x, y, z;
+     cin >> x >> y >> z;
+
+     if( (x%2==0 && y%2==0)||(x%2==0 && z%2==0)||(z%2==0 && y%2==0))
+        cout << "pare";
+     else cout << "impare";
+
+
+-----
+    /*
+  int a, b;
+  cin >> a >> b;
+
+  cout << 100- ((100 - a) + (100 - b));
+  */
+
+  /*
+  int N, M;
+    cout << "Introduceti dimensiuni bucata de hartie \n";
+    cin >> N >> M;
+    int S = M * N - 1;
+    cout << S;
+    */
+
+    /*
+    int a, b, c;
+
+    cin >> a >> b >> c;
+
+    int s1 = b * (b + 1) / 2 - a * (a + 1) / 2 + a;
+    int s2 = c * (c + 1) / 2 - b * (b + 1) / 2 + b;
+    int s3 = c * (c + 1) / 2 - a * (a + 1) / 2 + a;
+    cout <<s1<<" "<<s2<<" "<<s3;
+    */
+
+-----
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    //Programul citește de la tastatură numărul n, iar apoi n numere naturale.
+     int n, nr, S;
+
+     cin >> n;
+     S = 0;
+
+     for(int i = 0; i < n ; i++){
+        cin >> nr;
+        S += nr;
+     }
+
+     cout << S;
+}
+
+---
+
+
+? // Merge in CodeBlock dar nu in pbinfo
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    // Se dau două numere naturale nenule n și m. Pentru mulțimile A={1,2,..,n} și B={1,2,...,m}, să se afișeze mulțimea A×B={(a,b) | a∈A, b∈B} – produsul cartezian al mulțimilor A și B.
+
+
+    int n, m;
+    cin >> n >> m;
+
+    cout << "{";
+    int i, j;
+
+    for(i = 1; i <= n; i++){
+        for(j = 1; j <= m; j++){
+            if((i != n) && (j != m)){
+                cout << "("<<i<<","<<j<<"),";
+            }else{
+                cout << "("<<i<<","<<j<<")";
+            }
+
+        }
+    }
+    cout << "}";
+}
+
+
+---
+// Se citește numărul natural n. Să se afișeze următoarea piramidă de numere:
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    // Se citește numărul natural n. Să se afișeze următoarea piramidă de numere:
+
+    int n;
+    cin >> n;
+    string s = "";
+
+    for(int i = 1; i <= n; i++){
+        s+=" "+std::to_string(i);
+        cout << s;
+        cout << "\n";
+    }
+}
+
+
+
+Varianta acceptata este :
+
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+    int n;
+    cin >> n;
+    for(int i = 1; i <= n; ++i){
+        for(int j = 1; j <= i; ++j)
+            cout << j << ' ';
+        cout << endl;
+    }
+    return 0;
+}
+
+---
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    // Se dă n. Să se afișeze 10n.
+
+    int n, P;
+    cin >> n;
+
+    P = 1;
+
+    while(n>0){
+        P*=10;
+        n--;
+    }
+    cout << P;
+}
+
+----
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    //Se dă un număr n. Afișați numărul n * 10a.
+
+    int n, a, P;
+    cin >> n >> a;
+
+    P = 1;
+
+    while(a>0){
+        P*=10;
+        a--;
+    }
+    cout << n * P;
+}
+
+
+---
+ 
+  #include <iostream>
+
+using namespace std;
+
+int main()
+{
+    // Se citește un număr natural n. Să se afișeze o figură similară cu cea din exemplu.
+    // Programul citește de la tastatură numărul n
+
+    int n;
+    cin >> n;
+
+    string value_to_print_string = "";
+
+   for(int i = 1; i <= n; i++){
+       value_to_print_string += "1";
+       float value_to_print = std::stof(value_to_print_string) * i;
+       for(int j = 1; j <= i; j++){
+            cout << value_to_print << "\n";
+       }
+   }
+}
+
+---
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    // Se dau două numere naturale n, care este putere a lui 10 și k. Să se afișeze n la puterea k.
+    //Programul citește de la tastatură numerele n și k.
+
+    int n, k, P = 1;
+    cin >> n >> k;
+
+    string value_to_print_string = "";
+
+    for(int i = 1; i <= k; i++){
+        P *= n;
+    }
+
+    cout << P;
+}
+
+
+--
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    // Se dau două numere naturale n, care este putere a lui 10 și k. Să se afișeze n la puterea k.
+    //Programul citește de la tastatură numerele n și k.
+
+    int n, k;
+    cin >> n >> k;
+
+    cout << 1;
+
+    int cnt = 0;
+
+    while(n){
+        n = n/10;
+        cnt++;
+    }
+
+    for(int i = 1; i <= k * (cnt-1); i++){
+        cout << 0;
+    }
+
+}
+
+---
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    // Se citesc 2 numere, n și p, afișați în ordine crescătoare toate puterile lui n care sunt mai mici sau egale cu p.
+    // Programul citește de la tastatură numerele n, și p, separate prin spații.
+
+    int n;
+    long long p;
+    cin >> n >> p;
+
+
+    for(long long i = 1; i <= p; i *= n){
+        cout << i << ' ';
+    }
+
+}
+
+
+
+---
+
+
+
+
+
+
